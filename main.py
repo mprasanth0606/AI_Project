@@ -9,10 +9,8 @@ data = pd.read_csv('data/house_data.csv')
 # Step 2: Features (X) and Target (y)
 X = data[['area', 'bedrooms', 'age']]
 y = data['price']
-print(X,y)
 # Step 3: Split dataset → 60% train, 40% test
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=42)
-print(X_train,y_train)
 # Step 4: Create and train model
 model = LinearRegression()
 model.fit(X_train, y_train)
